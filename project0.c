@@ -75,6 +75,7 @@ int main(int argc, char** argv){
 //				printf("\tCharacter  Found at index %d...\t", index);
 				occurrences[index].frequency++;
 //				print(&occurrences[index]);
+				free(_tempHolder->character);
 				free(_tempHolder);
 			}				
 		}
@@ -90,6 +91,8 @@ int main(int argc, char** argv){
 	
 //	printf("Total Number of characters read: %d\n", _charRead);
 //	printf("Total unique characters read: %ld\n", _size);
+	int i  = 0;
+	for (i; i < _size; i++) free(occurrences[i].character);
 	free(occurrences);
 //	printf("------PROGRAM END-------\n");
 	return 0;
