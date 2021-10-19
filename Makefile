@@ -1,12 +1,15 @@
 all: Project0
 
 Project0: 
-	cc Project0.c -o Project0 -pedantic
+	cc project0.c -o project0 -pedantic
 
-compile:Project0
-	./Project0 <thorn
+execute:Project0
+	./project0 <input/f1 >output.txt
+	./project0 <input/f2 >>output.txt
+	./project0 <input/f3 >>output.txt
 
 clean:
-	rm -f Project0
+	rm -f project0
 
-run: compile clean
+run: execute clean
+	vim output.txt
