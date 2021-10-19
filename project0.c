@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_SIZE 150000
+#define MAX_SIZE 250000
 #define IS_UTF(_byte) (_byte >= 0xC0)
 
 #define IS_2_BYTE(_byte) (_byte >= 0xC0 && _byte <= 0xDF)
